@@ -130,9 +130,9 @@ for i in range(int(pass_count)):
     passlist.append(0)
 word=ins_word()
 lang=get_lang(word)
-min, _ =find_min(passlist_res)
+min=find_min(passlist_res)
 elem_count=0
-for i in range(10):
+for i in range(1000):
     cons, vows = get_chars(word, lang)
     password = change(cons, vows, lang)
     results=zxcvbn(password, user_inputs=word)
